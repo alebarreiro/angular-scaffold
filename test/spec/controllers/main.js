@@ -1,20 +1,15 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('PhoneListCtrl', function(){
 
-  // load the controller's module
-  beforeEach(module('gpsDeployPageApp'));
+  beforeEach(module('phonecatApp'));
 
-  var MainCtrl;
+  it('should create "phones" model with 3 phones', inject(function($controller) {
+    var scope = {},
+      ctrl = $controller('PhoneListCtrl', {$scope:scope});
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    MainCtrl = $controller('MainCtrl', {
-      // place here mocked dependencies
-    });
+    expect(scope.phones.length).toBe(3);
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(MainCtrl.awesomeThings.length).toBe(3);
-  });
 });
+//npm test

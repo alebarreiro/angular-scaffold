@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="phonecatApp">
+<html ng-app="phonecatApp"> <!--Angular module phonecatApp (root scope)-->
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -14,11 +14,15 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-controller="PhoneListCtrl">
+  <body ng-controller="PhoneListCtrl"> <!--Angular controller (Controller scope) -->
+    <ul>
+      <li ng-repeat="phone in phones"> <!-- Angular repeater directive -->
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+      </li>
+    </ul>
   </body>
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+
 
 
 
