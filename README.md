@@ -7,13 +7,13 @@ version 0.12.0.
 
 Steps:
 
-rvm install 2.1.1
+``rvm install 2.1.1``
 
-rvm use 2.1.1
+``rvm use 2.1.1``
 
-npm install
+``npm install``
 
-bower install
+``bower install``
 
 Run `grunt` for building and `grunt serve` for preview.
 
